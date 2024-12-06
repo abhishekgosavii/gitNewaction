@@ -10,5 +10,5 @@ jobs:
     hello_world:
         runs-on: ubuntu-latest
         steps: 
-            - name: "second name is Print hellow world"
-              run: echo "running third repository"
+            - name: "print current date"
+              run: date
