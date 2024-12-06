@@ -1,4 +1,4 @@
-name: "hHllo world Workflow"
+name: "name upper is hello world Workflow"
 
 on:
   push:
@@ -10,5 +10,5 @@ jobs:
     hello_world:
         runs-on: ubuntu-latest
         steps: 
-            - name: "Print hellow world"
-              run: echo "hello world"
+            - name: "second name is Print hellow world"
+              run: echo "running third repository"
