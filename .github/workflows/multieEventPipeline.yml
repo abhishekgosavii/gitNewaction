@@ -5,20 +5,26 @@ on:
             - master
             - test
     
-    # whenver pull request is found on above branches then below workflow/pipeline is executed .concurrency: 
+            # whenver pull request is found on above branches then below workflow/pipeline is executed .concurrency: 
 
+    pull_request: #Event : Whenever a pull request is made to the repository 
+        branches: 
+            - master
+    
+    
+    
+    
 jobs:
-    on-push: #job name
+    on-push: #job name job1
+        if: github.event_name ==  'push'
         runs-on: ubuntu-latest
         steps: # steps to be executed in the job
             - name: "running on master push" #step1
               run: echo "Running on master push"
 
-    on-pull: #job name
+    on-pull: #job name job2
+        if: github.event_name == 'pull_request' 
         runs-on: ubuntu-latest
         steps: # steps to be executed in the job
             - name: "Running on pull request" #step1
               run: echo "Running on pull"
-
-
-        
